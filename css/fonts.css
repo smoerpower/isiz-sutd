@@ -1,0 +1,16 @@
+@font-face {
+  font-family: 'PTSans', sans-serif;
+  src: url("../fonts/PT_Sans/PT_Sans-Web-Regular.ttf") format("truetype");
+  src: url("../fonts/PT_Sans/PT_Sans-Web-Italic.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+
+}
+
+@font-face {
+  font-family: 'PTSerif', serif;
+  src: url("../fonts/PT_Serif/PT_Serif-Web-Regular.ttf") format("truetype");
+  src: url("../fonts/PT_Serif/PT_Serif-Web-Italic.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}

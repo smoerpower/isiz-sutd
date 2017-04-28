@@ -1,7 +1,7 @@
 <?php
   # Функция для генерации случайной строки
   function generateCode($length=6) {
-    $chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPRQSTUVWXYZ0123456789";
+    $chars = "";
     $code = "";
     $clen = strlen($chars) - 1;
     while (strlen($code) < $length) {
@@ -52,7 +52,7 @@
  Пароль <input name="password" type="password"><br>
  <input name="submit" type="submit" value="Войти">
  </form>
- 
+
 <?php
 # Проверяем наличие в куках номера ошибки
 if (isset($errors)) {
