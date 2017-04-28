@@ -1,0 +1,23 @@
+AddDefaultCharset utf-8
+
+DirectoryIndex home.php
+
+AddType application/x-httpd-php .php .php5 .phtml .html .htm
+
+
+# ошибка сервера, неверный запрос
+ErrorDocument 400 /error/badrequest.html
+
+# неавторизован
+ErrorDocument 401 /error/authreqd.html
+
+# вход запрещён
+ErrorDocument 403 /error/forbid.html
+
+# самая распространённая - страница не найдена
+ErrorDocument 404 /error/notfound.html
+
+# внутренняя ошибка сервера
+ErrorDocument 500 /error/serverr.html
+
+
