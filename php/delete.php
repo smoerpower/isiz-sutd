@@ -8,8 +8,5 @@ mysql_query("DELETE FROM news WHERE id='$id' ");
 
 mysql_close();
 
-echo "Запись успешно удалена!";
 
-?>
-
-<a href = "../home.php"> Перейти обратно к сайту </a>
+header("Location: ../home.php"); exit();

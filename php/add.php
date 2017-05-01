@@ -17,29 +17,28 @@ $dbname = "smoer";
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 // Check connection
 if (!$conn) {
-   die("Connection failed: " . mysqli_connect_error());
+    die("Connection failed: " . mysqli_connect_error());
 }
 
 $row = mysql_fetch_assoc($result);
-if(isset($_POST['add'])) // если кнопка нажата
-{
-   $title = strip_tags(trim ($_POST['title']));
-   $text = strip_tags(trim($_POST['text']));
-   $author = strip_tags(trim($_POST['author']));
-   $date = $_POST['date'];
-   $time = $_POST['time'];
+if (isset($_POST['add'])) { // если кнопка нажата
+   $title = strip_tags(trim($_POST['title']));
+    $text = strip_tags(trim($_POST['text']));
+    $author = strip_tags(trim($_POST['author']));
+    $date = $_POST['date'];
+    $time = $_POST['time'];
 
 
-$sql = "INSERT INTO news (title, text, date, time, author)
+    $sql = "INSERT INTO news (title, text, date, time, author)
 VALUES ('$title', '$text', '$date', '$time', '$autor')";
 
-if (mysqli_query($conn, $sql)) {
-   echo "New record created successfully";
-} else {
-   echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-}
+    if (mysqli_query($conn, $sql)) {
+        echo "New record created successfully";
+    } else {
+        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
 
-mysqli_close($conn);
+    mysqli_close($conn);
 }
 ?>
 
@@ -66,7 +65,7 @@ mysqli_close($conn);
   <input type="text" name="time" value="<?php echo date('H:i:s'); ?> " />
 </div>
 <input type ="submit" name="add" value ="Добавить"/>
-
+<input type="reset" Value=" Отчистить ">
 </form>
 
 
