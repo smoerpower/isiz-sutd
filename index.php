@@ -22,7 +22,7 @@ include_once "php/paggination.php";  ?>
   <div class="navbar navbar-default navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
-            <a href="home.php" class="navbar-brand">ИСЗИ <span class="glyphicon glyphicon-lock" aria-hidden="true"></span></a>
+            <a href="index.php" class="navbar-brand">ИСЗИ <span class="glyphicon glyphicon-lock" aria-hidden="true"></span></a>
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#responsive-menu">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>

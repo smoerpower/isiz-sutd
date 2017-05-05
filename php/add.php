@@ -33,7 +33,7 @@ if (isset($_POST['add'])) { // если кнопка нажата
 VALUES ('$title', '$text', '$date', '$time', '$autor')";
 
     if (mysqli_query($conn, $sql)) {
-        echo "New record created successfully";
+        echo "Запись успешно добавлена!";
     } else {
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }

@@ -1,98 +1,180 @@
 /*Content-style*/
 
-html body div.container-fluid {
-  background: #AFDAEC;
+img {
+  display: inline-block;
+  height: auto;
+  max-width: 100%;
+}
+/* 2 Способ - Придать адаптивность всем изображениям. При этом данные изображения будут себя ввести как блочные элементы (block) */
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+/* 3 Способ - Придать адаптивность всем изображениям, расположенных в элементе с id="main". При этом данные изображения будут себя ввести как блочные элементы (block) */
+#main img {
+  display: block;
+  height: auto;
+  max-width: 100%;
 }
 
-html body div.container-fluid div.col-lg-5.col-md-5.col-lg-offset-2.col-md-offset-2 div.row div.col-lg-12.col-md-12 {
+html body div.container-fluid {
+  position: relative;
+  height: 100%;
+  margin-top: 5em;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+html body div.container-fluid div.row div.col-lg-8.col-md-8.col-lg-offset-2.col-md-offset-2 div.row div.col-lg-9.col-md-8 article {
+  min-height: 20px;
+  padding: 19px;
+  margin-bottom: 20px;
+  background-color: #fafafa;
+  border: 1px solid #e8e8e8;
+  border-radius: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+html body div.container-fluid div.row div.col-lg-8.col-md-8.col-lg-offset-2.col-md-offset-2 div.row div.col-lg-9.col-md-8 article h2 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  color: #626262;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+html body div.container-fluid div.row div.col-lg-8.col-md-8.col-lg-offset-2.col-md-offset-2 div.row div.col-lg-9.col-md-8 article small {
+  font-family: 'Open Sans' sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  color: #626262;
+  margin-left: 20px;
+}
+html body div.container-fluid div.row div.col-lg-8.col-md-8.col-lg-offset-2.col-md-offset-2 div.row div.col-lg-9.col-md-8 article p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: #626262;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+html body main div.container-fluid div.row div.col-lg-10.col-md-10.col-lg-offset-1.col-md-offset-1 {
   position: relative;
   background: #fff;
   border-radius: 2px;
   box-shadow: 0 1px 0 0 #d7d8db, 0 0 0 1px #e3e4e8;
-  margin: 15px 0 0;
+  margin: 30px 10 0;
 }
-
-html body div.container-fluid div.col-lg-5.col-md-5.col-lg-offset-2.col-md-offset-2 div.row div.col-lg-12.col-md-12 p {
+html body div.container-fluid div.row div.col-lg-8.col-md-8.col-lg-offset-2.col-md-offset-2 div.text-center div#pagination_controls {
+  position: relative;
+  color: #2b2b2b;
+  font-size: 18px;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+  html body div.container-fluid div.row div.col-lg-8.col-md-8.col-lg-offset-2.col-md-offset-2 div.text-center div#pagination_controls a {
+  color: #717171;
+  font-size: 18px;
+}
+html body main div.container-fluid div.col-lg-10.col-md-10.col-lg-offset-1.col-md-offset-1 form.form fieldset div.row div.row div.col-lg-5.col-md-5 div.col-lg-9.col-md-9 select#select.form-control option {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
   font-size: 16px;
-  padding-left: 20px;
-  padding-bottom: 20px;
-  padding-right: 20px;
-  padding-top: 10px;
   color: #000;
 }
 
-html body div.container-fluid div.col-lg-5.col-md-5.col-lg-offset-2.col-md-offset-2 div.row div.col-lg-12.col-md-12 h2 {
-  font-family: 'Roboto', sans-serif;
+
+html body main div.container-fluid div.row div.col-lg-10.col-md-10.col-lg-offset-1.col-md-offset-1 {
+  font-family: 'Open Sans', sans-serif;
   font-weight: 300;
-  font-size: 20px;
+  font-size: 16px;
   padding-left: 20px;
   padding-top: 20px;
   padding-right: 20px;
   color: #424141;
 }
-
-html body div.container-fluid div.col-lg-5.col-md-5.col-lg-offset-2.col-md-offset-2 div.row div.col-lg-12.col-md-12 small {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 12px;
-  color: #5e5e5e;
-  font-weight: 300;
-  padding-left: 20px;
-}
-
-html body div.container-fluid div.col-lg-5.col-md-5.col-lg-offset-2.col-md-offset-2 div.row div.col-lg-12.col-md-12 div.btn-toolbar {
+html body div.container-fluid div.col-lg-8.col-md-8.col-lg-offset-2.col-md-offset-2 div.row div.col-lg-9.col-md-8 div.btn-toolbar {
   padding-left: 10px;
   padding-right: 10px;
   padding-top: 10px;
   padding-bottom: 10px;
 }
-
-
 /*Колонка справа*/
-
-html body div.container-fluid div.row div.col-lg-3.col-md-2 {
+html body div.container-fluid div.row div.col-lg-3.col-md-4 {
   padding-top: 5px;
 }
-
-html body div.container-fluid div.col-lg-2.col-md-2.col-lg-offset-1.col-md-offset-1 {
-  background: #AFDAEC;
-  border: none;
-  padding-top: 15px;
-  font-family: 'Open Sans';
-  color: #000;
+html body div.container-fluid div.row div.col-lg-8.col-md-8.col-lg-offset-2.col-md-offset-2 div.row div.row div.col-lg-3.col-md-4 {
+  font-family: 'Open Sans', sans-serif;
+  color: #656565;
   font-size: 14px;
   font-weight: 400;
+  margin-top: -5px;
 }
-
-html body div.container-fluid div.col-lg-2.col-md-2.col-lg-offset-1.col-md-offset-1 div.row div.panel.panel-default div.panel-heading {
+html body div.container-fluid div.row div.col-lg-7.col-md-7.col-lg-offset-2.col-md-offset-2 div.row div.row div.col-lg-3.col-md-4 div.panel.panel-default div.panel-heading {
   background: #2C3E50;
   color: #fff;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   font-size: 15px;
 }
-
-
 /*Footer*/
-
-html body div.container-fluid footer.footer.text-center div.container-fluid {
+html body footer.footer.text-center  {
   background: #2C3E50;
   padding-left: -15px;
   padding-right: -15px;
 }
-
-
 /*Other style*/
 
-body {
-  padding-top: 50px;
+/* ADMIN PANEL */
+html body main div.container-fluid div.row div.col-lg-10.col-md-10.col-lg-offset-1.col-md-offset-1 form.form fieldset div.row a.navbar-brand img#main {
+  height: 0.7em;
+  opacity: 0.4;
+  margin-left: -10px;
 }
+
+
+html body main div.container-fluid div.row div.col-lg-10.col-md-10.col-lg-offset-1.col-md-offset-1 form.form fieldset div.row div.col-lg-12 {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+html body main div.container-fluid div.row div.col-lg-10.col-md-10.col-lg-offset-1.col-md-offset-1 form.form fieldset div.row div.col-lg-12 div.col-lg-2.col-lg-push-5 h4 {
+  color: #343434;
+  font-size: 15px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  margin-top: -5px;
+}
+
+html body main div.container-fluid div.row div.col-lg-10.col-md-10.col-lg-offset-1.col-md-offset-1 form.form fieldset div.row div.col-lg-12 div.col-lg-5 h4 {
+  color: #343434;
+  font-size: 15px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  margin-top: -5px;
+}
+
+html body main div.container-fluid div.col-lg-10.col-md-10.col-lg-offset-1.col-md-offset-1 div.row form.form fieldset div.row div.col-lg-12 div.page-header h3 small {
+}
+html body main div.container-fluid div.col-lg-10.col-md-10.col-lg-offset-1.col-md-offset-1 div.row form.form {
+	min-height: 20px;
+	padding: 19px;
+	margin-bottom: 20px;
+	background-color: #fafafa;
+	border: 1px solid #e8e8e8;
+	border-radius: 0;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
 
 .navbar navbar-default navbar-fixed-top {
   background: #34495e;
 }
-
 @media (min-width: 768px) {
   .container-small {
     width: 600px;
@@ -126,58 +208,4 @@ body {
 
 .container-small, .container-large {
   max-width: 100%;
-}
-
-.container .row {
-  margin-top: 10px;
-}
-
-.navbar {
-  margin-bottom: 20px;
-}
-
-.nav-tabs {
-  margin-bottom: 15px;
-}
-
-.pager ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  background: #767676;
-  text-align: center;
-  height: 600px;
-  display: block;
-  /* добавляем блочность, если необходимо */
-  font-size: 0;
-  /* убираем нежелательные отсутпы у дочерних элементов */
-}
-
-.pager li {
-  background: none;
-  padding: 10px;
-  margin: 0 20px;
-  font-size: 16px;
-  /* возвращаем размер шрифта */
-  display: inline-block;
-  /* позволяем vertical-align выравнивать себя по вертикали */
-  vertical-align: middle;
-  /* и выравниваем */
-}
-
-.pager a, .pager a:hover {
-  color: #fff;
-}
-
-.pager li>a:hover, .pager li>a:focus {
-  text-decoration: none;
-  background-color: #d4d4d4;
-}
-
-.pager li>a, .pager li>span {
-  display: inline-block;
-  padding: 5px 14px;
-  background-color: #95a5a6;
-  border: 1px solid transparent;
-  border-radius: 15px;
 }

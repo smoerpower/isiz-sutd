@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+<!-- <!DOCTYPE HTML>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
@@ -11,7 +11,7 @@
 
 
 <a href="../home.php">Перейти на главную</a>
-
+ -->
 
 <?php
 include_once("db.php");
@@ -43,25 +43,3 @@ if(isset($_POST['save']))
 }
 
 ?>
-
-<form method="post" action="edit.php?id=<?php echo $id; ?>">
-
-Название новости<br />
-<input type="text" name ="title" value="<?php echo $row['title']; ?>" /><br />
-
-Текст новости <br />
-<textarea cols="40" rows="10" name ="text"><?php echo $row['text']; ?></textarea><br />
-
-Автор новости <br />
-<input type="text" name="author" value="<?php echo $row['author']; ?>" /> <br />
-
-<br />
-<input type ="submit" name="save" value ="Сохранить"/>
-
-
-
-</form>
-
-
-</body>
-</html>

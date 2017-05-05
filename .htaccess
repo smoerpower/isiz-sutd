@@ -1,6 +1,8 @@
 AddDefaultCharset utf-8
 
-DirectoryIndex home.php
+DirectoryIndex index.php
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.(php|html|htm)\ HTTP/
+RewriteRule ^(.*)index\.(php|html|htm)$ http://isiz-sutd/$1 [R=301,L]
 
 AddType application/x-httpd-php .php .php5 .phtml .html .htm
 
@@ -19,5 +21,3 @@ ErrorDocument 404 /error/notfound.html
 
 # внутренняя ошибка сервера
 ErrorDocument 500 /error/serverr.html
-
-
