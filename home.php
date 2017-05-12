@@ -1,5 +1,5 @@
-<?php
-include_once "php/paggination.php";  ?>
+<?php include_once "php/paggination.php";
+{?>
 
 <!DOCTYPE HTML>
 <html lang="ru">
@@ -22,7 +22,7 @@ include_once "php/paggination.php";  ?>
   <div class="navbar navbar-default navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
-            <a href="home.php" class="navbar-brand">ИСЗИ <span class="glyphicon glyphicon-lock" aria-hidden="true"></span></a>
+            <a href="images/logo-iszi.png" class="navbar-brand"> ИСЗИ <span class="glyphicon glyphicon-lock" aria-hidden="true"></span></a>
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#responsive-menu">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -57,8 +57,8 @@ include_once "php/paggination.php";  ?>
 <div class="row">
     <div class="col-lg-9 col-md-8">
 
+<?php echo $list; ?>
 
-    <?php echo $list; ?>
 
       </div>
 
@@ -83,17 +83,20 @@ include_once "php/paggination.php";  ?>
   <div id="pagination_controls"><?php echo $paginationCtrls; ?></div>
 </div>
   </div>
-
-
-</div>
-
-
-</div>
+<?php }?>
 
 </div>
 
 
+</div>
 
+</div>
+
+<div class="form-group">
+  <label for=""></label>
+  <input type="text" class="form-control" id="" placeholder="">
+  <p class="help-block">Help text here.</p>
+</div>
 
 
 <!-- <footer class="footer text-center">

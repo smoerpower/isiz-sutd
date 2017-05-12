@@ -33,7 +33,7 @@ if (isset($_POST['add'])) { // если кнопка нажата
 VALUES ('$title', '$text', '$date', '$time', '$autor')";
 
     if (mysqli_query($conn, $sql)) {
-        echo "Запись успешно добавлена!";
+        echo "Новая запись успешно добавлена!";
     } else {
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
@@ -43,9 +43,9 @@ VALUES ('$title', '$text', '$date', '$time', '$autor')";
 ?>
 
 
-<a href="../home.php">Перейти на главную</a>
+<a href="admin.php">Перейти в панель администратора</a>
 
-<form method="post" action="add.php">
+<form class="form-control" method="post" action="add.php">
 
 Название новости
 <div class="add-title">
@@ -65,7 +65,7 @@ VALUES ('$title', '$text', '$date', '$time', '$autor')";
   <input type="text" name="time" value="<?php echo date('H:i:s'); ?> " />
 </div>
 <input type ="submit" name="add" value ="Добавить"/>
-<input type="reset" Value=" Отчистить ">
+
 </form>
 
 

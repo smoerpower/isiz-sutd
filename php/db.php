@@ -1,6 +1,10 @@
 <?php
-$connection = mysql_connect("localhost", "root", "123");
-$db = mysql_select_db("smoer");
+$servername = "localhost";
+$username = "root";
+$password = "123";
+$dbname = "smoer";
+// This first query is just to get the total count of rows
+$conn = mysqli_connect($servername, $username, $password, $dbname);
 
 
  if (!$connection || !$db) {

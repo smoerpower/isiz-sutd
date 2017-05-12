@@ -31,19 +31,8 @@ include_once "php/paggination.php";  ?>
         </div>
         <div class="collapse navbar-collapse" id="responsive-menu">
             <ul class="nav navbar-nav">
-                <li><a href="#"> Новости </a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Студентам <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#"> Тут что-то будеzт </a></li>
-                        <li><a href="#"> Тут что-то будет </a></li>
-                          <!-- если понадобится разделитель <li class="divider"></li> -->
-                        <li><a href="#"> Тут что-то будет </a></li>
-                    </ul>
-                </li>
-
-                <li><a href="#"> Библиотека </a></li>
-                <li><a href="#"> Мероприятия </a></li>
+                <li><a href="index.php"> Новости </a></li>
+                <li><a href="catalog.php"> Библиотека </a></li>
             </ul>
         </div>
      </div>
@@ -80,20 +69,35 @@ include_once "php/paggination.php";  ?>
 </div>
 
 <div class="text-center">
-  <div id="pagination_controls"><?php echo $paginationCtrls; ?></div>
+<ul class="pagination pagination-sm">
+  <?php echo $paginationCtrls; ?>
+</ul>
 </div>
   </div>
 
 
-</div>
 
 
 </div>
 
 </div>
+  </div>
 
 
+        <footer>
 
+            <div class="col-lg-12">
+<div class="text-center">
+
+              <ul class="list-unstyled">
+                <li class="pull-right"><a href="#top"><span class="glyphicon glyphicon-chevron-up"></span></a></li>
+              <p>Made by <a href="http://thomaspark.co/" rel="nofollow">Thomas Park</a>. Contact him at <a href="mailto:thomas@bootswatch.com">smoer661@gmail.com</a>.</p>
+              <p>Based on <a href="http://getbootstrap.com/" rel="nofollow">Bootstrap</a>. Icons from <a href="http://fortawesome.github.io/Font-Awesome/" rel="nofollow">Font Awesome</a>. Web fonts from <a href="http://www.google.com/webfonts" rel="nofollow">Google</a>.</p>
+
+            </div>
+            </div>
+
+        </footer>
 
 
 <!-- <footer class="footer text-center">
@@ -105,6 +109,9 @@ include_once "php/paggination.php";  ?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
 </script>
 <script src="js/bootstrap.js"></script>
+<script>/* <![CDATA[ */(function(d,s,a,i,j,r,l,m,t){try{l=d.getElementsByTagName('a');t=d.createElement('textarea');for(i=0;l.length-i;i++){try{a=l[i].href;s=a.indexOf('/cdn-cgi/l/email-protection');m=a.length;if(a&&s>-1&&m>28){j=28+s;s='';if(j<m){r='0x'+a.substr(j,2)|0;for(j+=2;j<m&&a.charAt(j)!='X';j+=2)s+='%'+('0'+('0x'+a.substr(j,2)^r).toString(16)).slice(-2);j++;s=decodeURIComponent(s)+a.substr(j,m-j)}t.innerHTML=s.replace(/</g,'&lt;').replace(/\>/g,'&gt;');l[i].href='mailto:'+t.value}}catch(e){}}}catch(e){}})(document);/* ]]> */</script>
 
 </body>
+
+
 </html>
