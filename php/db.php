@@ -1,12 +1,8 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "123";
-$dbname = "smoer";
-// This first query is just to get the total count of rows
-$conn = mysqli_connect($servername, $username, $password, $dbname);
 
-
- if (!$connection || !$db) {
-     exit(mysql_error());
- }
+      $conn = mysqli_connect("localhost", "root", "123", "smoer");
+/* проверка соединения */
+if (mysqli_connect_errno()) {
+    printf("Соединение не установлено: %s\n", mysqli_connect_error());
+    exit();
+}

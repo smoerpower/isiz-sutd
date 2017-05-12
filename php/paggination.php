@@ -14,7 +14,7 @@ $row = mysqli_fetch_row($query);
 
 $rows = $row[0];
 // This is the number of results we want displayed per page
-$page_rows = 5;
+$page_rows = 10;
 // This tells us the page number of our last page
 $last = ceil($rows/$page_rows);
 // This makes sure $last cannot be less than 1
@@ -123,11 +123,12 @@ while ($row = mysqli_fetch_array($query, MYSQLI_ASSOC)) {
             <h4 class="panel-title">
               <a data-toggle="collapse" data-parent="#accordion" href="#collapse'.$id.'">
               '.$title.'<small> &nbsp #'.$id.' / '.$date.'/ '.$time.' </small>
-                <a type ="submit" class="btn pull-right btn-sm "
-                href="delete.php?id='.$id.'"><span class="glyphicon glyphicon-trash"></a>
-                  <a type ="submit" class="btn btn-sm pull-right" name="save" href="edit.php?id='.$id.'"><span class="glyphicon glyphicon-pencil"></a>
-                    <a type ="submit" class="btn pull-right btn-sm "
-                    href="add.php"><span class="glyphicon glyphicon-plus"></span></a>
+
+                <a href="delete.php?id='.$id.'"type ="submit" class="btn pull-right btn-sm "><span class="glyphicon glyphicon-trash"></a>
+
+                  <a href="?id='.$id.'" type ="submit" class="btn btn-sm pull-right" name="save" ><span class="glyphicon glyphicon-pencil"></a>
+
+                    <a href="admin.php" type ="submit" name="add" class="btn pull-right btn-sm "><span class="glyphicon glyphicon-plus"></span></a>
               </a>
              </h4>
           </div>

@@ -13,7 +13,7 @@ include_once "php/paggination.php";  ?>
   <link href="css/bootstrap.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
   <link href="css/fonts.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Roboto:500" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Source+Sans+Pro:300,400,700" rel="stylesheet">
 
 </head>
 
@@ -106,10 +106,9 @@ include_once "php/paggination.php";  ?>
   </div>
 </footer> -->
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
-</script>
+<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="js/jquery-1.js"></script>
 <script src="js/bootstrap.js"></script>
-<script>/* <![CDATA[ */(function(d,s,a,i,j,r,l,m,t){try{l=d.getElementsByTagName('a');t=d.createElement('textarea');for(i=0;l.length-i;i++){try{a=l[i].href;s=a.indexOf('/cdn-cgi/l/email-protection');m=a.length;if(a&&s>-1&&m>28){j=28+s;s='';if(j<m){r='0x'+a.substr(j,2)|0;for(j+=2;j<m&&a.charAt(j)!='X';j+=2)s+='%'+('0'+('0x'+a.substr(j,2)^r).toString(16)).slice(-2);j++;s=decodeURIComponent(s)+a.substr(j,m-j)}t.innerHTML=s.replace(/</g,'&lt;').replace(/\>/g,'&gt;');l[i].href='mailto:'+t.value}}catch(e){}}}catch(e){}})(document);/* ]]> */</script>
 
 </body>
 
