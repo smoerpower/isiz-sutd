@@ -1,10 +1,14 @@
 <?php
 $conn = mysqli_connect("localhost", "root", "123", "smoer");
+if ($conn->connect_error) {
+    die("$mysqli->connect_errno: $conn->connect_error");
+}
+
 
 $id = ($_GET['id']);
 
 if ($_GET['id']) {
-    $query = "SELECT * FROM news WHERE id = $id ";
+    $query = "SELECT * FROM news ";
 
     if ($result = $conn->query($query)) {
         while ($row = $result->fetch_assoc()) {  /* извлечение ассоциативного массива */
@@ -12,7 +16,6 @@ if ($_GET['id']) {
             $title = $row['title'];
             $author = $row['author'];
         }
-        $result->free();
     }
 
 /* удаление выборки */
@@ -31,12 +34,13 @@ if (isset($_POST['save'])) {
     $time = strftime('%K.%M , strtotime($time)');
 
     $conn->query("UPDATE news SET title = '$title', text='$text', author='$author' WHERE id = $id ");
+    pg_free_result($query);
 }
 
-    mysqli_close($conn);
+mysqli_close($conn)
 ?>
 
-      <?php include_once 'db.php';
+      <?php
       $conn = mysqli_connect("localhost", "root", "123", "smoer");
 
     $row = mysql_fetch_assoc($result);
@@ -54,6 +58,8 @@ if (isset($_POST['save'])) {
         } else {
             echo "Error: " . $sql . "<br>" . mysqli_error($conn);
         }
+        pg_free_result($sql);
     }
-    mysqli_close($conn)
+
+
     ?>

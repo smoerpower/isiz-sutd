@@ -46,6 +46,7 @@ include_once "paggination.php";
 
 
 <?php include_once 'edit.php'; $author = 'Administrator'; ?>
+
             <div class="col-lg-7 col-md-7">
                <form method="post">
                  <div class="form-group">
@@ -78,10 +79,9 @@ include_once "paggination.php";
                     </div>
                     </div>
                           <div class="col-lg-10">
-                            <form  action="add.php" method="post">
 
                           <input type="submit" value="Добавить" name="add" class="btn btn-success btn-sm" />
-                      </form>
+
                           <input type ="submit" value="Сохранить" name="save" class="btn btn-warning btn-sm" />
 
 
