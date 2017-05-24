@@ -32,19 +32,15 @@ html body div.container-fluid {
   margin-right: 1em;
 }
 
-html body div.container-fluid div.col-lg-12.col-md-12 {
+html body div.container-fluid div.row div.col-lg-6.col-md-6.col-lg-offset-3.col-md-offset-3 div.row div.col-lg-12.col-md-12 {
   min-height: 20px;
   padding: 19px;
   margin-bottom: 20px;
-  border: 1px solid #e8e8e8;
-  border-radius: 0;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
 }
 
-html body div.container-fluid div.row div.col-lg-8.col-md-8.col-lg-offset-2.col-md-offset-2 div.row div.col-lg-9.col-md-8 article h2 {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
+html body div.container-fluid div.row div.col-lg-6.col-md-6.col-lg-offset-3.col-md-offset-3 div.row div.col-lg-12.col-md-12 article h2 {
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 500;
   font-size: 22px;
   color: #626262;
   margin-top: 10px;
@@ -53,7 +49,7 @@ html body div.container-fluid div.row div.col-lg-8.col-md-8.col-lg-offset-2.col-
   margin-right: 20px;
 }
 
-html body div.container-fluid div.row div.col-lg-8.col-md-8.col-lg-offset-2.col-md-offset-2 div.row div.col-lg-9.col-md-8 article small {
+html body div.container-fluid div.row div.col-lg-6.col-md-6.col-lg-offset-3.col-md-offset-3 div.row div.col-lg-12.col-md-12 article small {
   font-family: 'Open Sans' sans-serif;
   font-size: 12px;
   font-weight: 300;
@@ -61,11 +57,11 @@ html body div.container-fluid div.row div.col-lg-8.col-md-8.col-lg-offset-2.col-
   margin-left: 20px;
 }
 
-html body div.container-fluid div.row div.col-lg-8.col-md-8.col-lg-offset-2.col-md-offset-2 div.row div.col-lg-9.col-md-8 article p {
+html body div.container-fluid div.row div.col-lg-6.col-md-6.col-lg-offset-3.col-md-offset-3 div.row div.col-lg-12.col-md-12 article p {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   font-weight: 300;
-  line-height: 1.6;
+  line-height: 1.8;
   color: #1c1c1c;
   margin-left: 15px;
   margin-right: 15px;
@@ -112,47 +108,12 @@ html body div.container-fluid div.col-lg-8.col-md-8.col-lg-offset-2.col-md-offse
 }
 
 
-/*Колонка справа*/
-
-html body div.container-fluid div.row div.col-lg-3.col-md-4 {
-  padding-top: 5px;
-}
-
-html body div.container-fluid div.row div.col-lg-8.col-md-8.col-lg-offset-2.col-md-offset-2 div.row div.row div.col-lg-3.col-md-4 {
-  font-family: 'Open Sans', sans-serif;
-  color: #656565;
-  font-size: 14px;
-  font-weight: 400;
-  margin-top: -5px;
-}
-
-html body div.container-fluid div.row div.col-lg-7.col-md-7.col-lg-offset-2.col-md-offset-2 div.row div.row div.col-lg-3.col-md-4 div.panel.panel-default div.panel-heading p {
-  background: #2C3E50;
-  color: #fff;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
-  font-size: 15px;
-}
-
-html body div.container-fluid div.row div.col-lg-12.col-md-12 div.row div.col-lg-6.col-md-6 div#accordion.panel-group div.panel.panel-default div#collapse.panel-collapse.collapse div.panel-body p {
-  background: #2C3E50;
-  color: #fff;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
-  font-size: 18px;
-}
-
-
 /*Footer*/
-
-html body footer.footer.text-center {
-  background: #2C3E50;
-  padding-left: -15px;
-  padding-right: -15px;
-}
 
 
 /*Other style*/
+
+
 
 
 /* ADMIN PANEL */
@@ -162,28 +123,11 @@ html body div.container-fluid div.row div.col-lg-12.col-md-12 div.row div.col-lg
   font-weight: 300;
   font-size: 16px;
   color: #36313b;
-}
-
-html body div.container-fluid div.row div.col-lg-12.col-md-12 div.row div.col-lg-6.col-md-6 div.text-center div#pagination_controls a {
-  color: #9c9c9c;
+  margin-bottom: 15px;
 }
 
 html body div.container-fluid div.row div.col-lg-12.col-md-12 div.col-lg-6.col-md-6 div.col-lg-8 div.panel.panel-default {
   border: none;
-}
-
-html body div.container-fluid div.row div.col-lg-12.col-md-12 div.col-lg-6.col-md-6 div.col-lg-8 div.panel.panel-default div.panel-body {
-  padding: 10 5 10 5;
-  margin: 0 0 10 0;
-  background-color: #fafafa;
-  border-radius: 0;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-  outline-color: currentcolor;
-  outline-style: none;
-  outline-width: 0;
-  overflow-x: hidden;
-  overflow-y: hidden;
 }
 
 html body main div.container-fluid div.row div.col-lg-10.col-md-10.col-lg-offset-1.col-md-offset-1 form.form fieldset div.row a.navbar-brand img#main {
@@ -213,17 +157,15 @@ html body main div.container-fluid div.row div.col-lg-10.col-md-10.col-lg-offset
   margin-top: -5px;
 }
 
-html body div.container-fluid div.row div.col-lg-8.col-md-8.col-lg-offset-2.col-md-offset-2 div.row div.col-lg-9.col-md-8 article {
+html body div.container-fluid div.row div.col-lg-6.col-md-6.col-lg-offset-3.col-md-offset-3 div.row div.col-lg-12.col-md-12 article {
   min-height: 20px;
-  padding: 19px;
-  margin-bottom: 20px;
-  background-color: #fafafa;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
 }
 
-.navbar navbar-default navbar-fixed-top {
-  background: #34495e;
+html body div.container-fluid div.row div.col-lg-6.col-md-6.col-lg-offset-3.col-md-offset-3 div.row div.col-lg-12.col-md-12 {
+  border: none;
 }
 
 @media (min-width: 768px) {

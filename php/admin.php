@@ -1,5 +1,5 @@
-<?php
-include_once "paggination.php";
+
+<?php include_once "paggination.php";
 ?>
 <html lang="ru">
 <head>
@@ -28,7 +28,8 @@ include_once "paggination.php";
           </h4>
           </div>
         </div>
-        <div class="col-lg-4">
+        <div class="col-lg-1 col-lg-push-3">
+          <span class="glyphicon glyphicon-"></span>
         </div>
       </div>
 <!-- col-lg-5 col-md-5 -->
@@ -37,76 +38,67 @@ include_once "paggination.php";
     <div class="panel-group" id="accordion">
         <?php echo $listid; ?>
     </div>
-    <ul class="pagination pagination-sm">
-        <?php echo $paginationCtrls; ?>
-    </ul>
+      <ul class="pagination pagination-sm">
+          <?php echo $paginationCtrls; ?>
+      </ul>
   </div>
+<?php
+include_once 'edit.php'; $author = 'Administrator';
+
+  ?>
+
 
 <!-- col-lg-7 col-md-7 -->
+<div class="col-lg-7 col-md-7">
+
+ <form method="post" class="form-horizontal">
+
+   <div class="form-group">
+     <div class="col-lg-10 col-md-10">
+      <input type="text"  id="focusedInput" class="form-control" name ="title"
+      placeholder="Введите заголовок.."  value="<?php echo $title;?>"/>
+     </div>
+        <div class="col-lg-10 col-md-10">
+           <textarea id="focusedInput" class="form-control" rows="15"
+           name ="text"  placeholder="Введите текст.."><?php echo $text;?>
+          </textarea>
+        </div>
+    </div>
+
+      <div class="col-lg-12 col-sm-12">
+        <br />
+        <div class="input-group" role="toolbar">
+          <div class="col-lg-3 col-md-3">
+            <input type="text"  id="focusedInput" class="form-control input-md" placeholder="Введите автора.." name="author" value="<?php echo $author;?>" />
+          </div>
+          <div class="col-lg-3 col-md-3 ">
+            <input type="text"  id="focusedInput" class="form-control input-md" name="date" value="<?php echo $date = strftime('%e.%m.%Y');?>"/>
+          </div>
+          <div class="col-lg-3 col-md-3 ">
+              <input type="text"  id="focusedInput" class="form-control input-md" name="time" value="<?php echo $time = strftime('%k:%M');?>"/>
+          </div>
+        </div>
+      </div>
+
+        <div class="col-lg-10">
+          <div class="form-group">
+          <input type ="submit" value="Сохранить" name="save" class="btn btn-warning pull-right" />
+
+  </form>
+  <form class="" action="add.php" method="post">
+          <input type="submit" value="Добавить"  class="btn btn-success pull-right" />
 
 
-<?php include_once 'edit.php'; $author = 'Administrator'; ?>
+</form>
 
-            <div class="col-lg-7 col-md-7">
-               <form method="post">
-                 <div class="form-group">
-                  <div class="col-lg-10 col-md-10">
-                    <input type="text"  id="focusedInput" class="form-control"
-                     name ="title" autofocus placeholder="Введите заголовок.."  value="<?php echo $title;?>"/>
-                  </div>
-                   <div class="col-lg-10 col-md-10">
-                     <textarea id="focusedInput" class="form-control" rows="15"
-                    name ="text"  placeholder="Введите текст..">
-                    <?php echo $text;?>
-                  </textarea>
-                   </div>
-                    <div class="col-lg-12">
-
-                      <div class="input-group" role="toolbar">
-                        <div class="col-lg-3 col-md-3">
-                          <input type="text"  id="focusedInput" class="form-control input-md" placeholder="Введите автора.." name="author" value="<?php echo $author;?>"/>
-                        </div>
-                        <div class="col-lg-3 col-md-3 ">
-                          <input type="text"  id="focusedInput" class="form-control input-md" name="date" value="<?php echo $date = strftime('%e.%m.%Y');?>"/>
-                        </div>
-                        <div class="col-lg-3 col-md-3 ">
-                          <input type="text"  id="focusedInput" class="form-control input-md" name="time" value="<?php echo $time = strftime('%k:%M');?>"/>
-                        </div>
-
-                        <div class="col-lg-3 col-md-3 ">
-
-                        </div>
-                    </div>
-                    </div>
-                          <div class="col-lg-10">
-
-                          <input type="submit" value="Добавить" name="add" class="btn btn-success btn-sm" />
-
-                          <input type ="submit" value="Сохранить" name="save" class="btn btn-warning btn-sm" />
-
-
-                          </div>
-                      </div>
-                    </form>
-                  </div>
-
-
-
-
-                </div>
-
-
+        </div>
+        </div>
 
 </div>
-
-</div>
-
-
-
-  </div>
 </div>
 </div>
-
+</div>
+</div>
 
 
 

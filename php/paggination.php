@@ -1,12 +1,15 @@
 <?php
-// Script and tutorial written by Adam Khoury @ developphp.com
-// Line by line explanation : youtube.com/watch?v=T2QFNu_mivw
 $servername = "localhost";
 $username = "root";
 $password = "123";
 $dbname = "smoer";
-// This first query is just to get the total count of rows
+// Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
 $sql = "SELECT COUNT(id) FROM news";
 $query = mysqli_query($conn, $sql);
 $row = mysqli_fetch_row($query);
@@ -14,7 +17,7 @@ $row = mysqli_fetch_row($query);
 
 $rows = $row[0];
 // This is the number of results we want displayed per page
-$page_rows = 10;
+$page_rows = 5;
 // This tells us the page number of our last page
 $last = ceil($rows/$page_rows);
 // This makes sure $last cannot be less than 1
@@ -36,6 +39,9 @@ if ($pagenum < 1) {
 // This sets the range of rows to query for the chosen $pagenum
 $limit = 'LIMIT ' .($pagenum - 1) * $page_rows .',' .$page_rows;
 // This is your query again, it is for grabbing just one page worth of rows by applying $limit
+
+
+
 $sql = "SELECT id, title, text, date, time, author FROM news ORDER BY id DESC $limit";
 $query = mysqli_query($conn, $sql);
 // This shows the user what page they are on, and the total number of pages
@@ -50,11 +56,7 @@ if ($last != 1) {
        generate links to the first page, and to the previous page. */
     if ($pagenum > 1) {
         $previous = $pagenum - 1;
-        $paginationCtrls .= '
-
-        <li><a href="'.$_SERVER['PHP_SELF'].'?page='.$previous.'">&laquo;</a></li> &nbsp; &nbsp;
-
-        ';
+        $paginationCtrls .= '   <li><a href="'.$_SERVER['PHP_SELF'].'?page='.$previous.'">&laquo;</a></li> &nbsp; &nbsp; ';
 
 
 
@@ -104,8 +106,7 @@ while ($row = mysqli_fetch_array($query, MYSQLI_ASSOC)) {
 
 
     $list .= '<article id='.$id.'>
-  <a href="index.php?id='.$id.'">
-	<h2>'.$title.'</h2></a>
+	<h2>'.$title.'</h2>
 	<small>
    Опубликовано: '.$time.' '.$date.'
    Автор: '.$author.'
@@ -124,11 +125,11 @@ while ($row = mysqli_fetch_array($query, MYSQLI_ASSOC)) {
               <a data-toggle="collapse" data-parent="#accordion" href="#collapse'.$id.'">
               '.$title.'<small> &nbsp #'.$id.' / '.$date.'/ '.$time.' </small>
 
-                <a href="delete.php?id='.$id.'"type ="submit" class="btn pull-right btn-sm "><span class="glyphicon glyphicon-trash"></a>
+                <a href="delete.php?id='.$id.'" type ="submit" class="btn pull-right btn-sm "><span class="glyphicon glyphicon-trash"></a>
 
                   <a href="?id='.$id.'" type ="submit" class="btn btn-sm pull-right" name="save" ><span class="glyphicon glyphicon-pencil"></a>
 
-                    <a href="admin.php" type ="submit" name="add" class="btn pull-right btn-sm "><span class="glyphicon glyphicon-plus"></span></a>
+                    <a href="" type ="submit" name="add" class="btn pull-right btn-sm "><span class="glyphicon glyphicon-plus"></span></a>
               </a>
              </h4>
           </div>

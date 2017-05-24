@@ -1,28 +1,10 @@
 <?php
-$conn = mysqli_connect("localhost", "root", "123", "smoer");
-if ($conn->connect_error) {
-    die("$mysqli->connect_errno: $conn->connect_error");
-}
+$conn = mysqli_connect($servername, $username, $password, $dbname);
 
 
 $id = ($_GET['id']);
 
-if ($_GET['id']) {
-    $query = "SELECT * FROM news ";
 
-    if ($result = $conn->query($query)) {
-        while ($row = $result->fetch_assoc()) {  /* извлечение ассоциативного массива */
-            $text = $row['text'];
-            $title = $row['title'];
-            $author = $row['author'];
-        }
-    }
-
-/* удаление выборки */
-}
-
-//Если передана переменная на    редактирование /Достаем запсись из БД / ожидаем integer //запрос к БД
-       // DESC LIMIT 10 обратный порядок сортировки (вместо id = date)
  $row = mysql_fetch_assoc($query);
 if (isset($_POST['save'])) {
     $title = strip_tags(trim($_POST['title']));
@@ -33,33 +15,24 @@ if (isset($_POST['save'])) {
     $time = $row['time'];
     $time = strftime('%K.%M , strtotime($time)');
 
-    $conn->query("UPDATE news SET title = '$title', text='$text', author='$author' WHERE id = $id ");
-    pg_free_result($query);
+    $query = "UPDATE news SET title = '$title', text='$text', author='$author' WHERE id = $id ";
+    if (mysqli_query($conn, $query)) {
+        echo '<div class="alert"> Запись успешно отредактировано! Вернуться в <a href="admin.php"><b></b>админ панель?</a> </div>';
+    } else {
+        echo "Error: Не выбрана запись" ;
+    }
 }
 
-mysqli_close($conn)
-?>
 
-      <?php
-      $conn = mysqli_connect("localhost", "root", "123", "smoer");
+    $query = "SELECT * FROM news WHERE id = $id";
 
-    $row = mysql_fetch_assoc($result);
-    if (isset($_POST['add'])) { // если кнопка нажата
-       $title = strip_tags(trim($_POST['title']));
-        $text = strip_tags(trim($_POST['text']));
-        $author = strip_tags(trim($_POST['author']));
-
-
-        $sql = "INSERT INTO news (title, text, date, time, author)
-    VALUES ('$title', '$text', '$date', '$time', '$autor')";
-
-        if (mysqli_query($conn, $sql)) {
-            header('location: admin.php');
-        } else {
-            echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    if (mysqli_query($conn, $query)) {
+        while ($row = mysqli_fetch_assoc($query)) {  /* извлечение ассоциативного массива */
+            $text = $row['text'];
+            $title = $row['title'];
+            $author = $row['author'];
         }
-        pg_free_result($sql);
+        mysqli_free_result($query);
     }
 
-
-    ?>
+mysqli_close($conn);

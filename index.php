@@ -1,5 +1,7 @@
 <?php
-include_once "php/paggination.php";  ?>
+require_once 'php/paggination.php';
+
+?>
 
 <!DOCTYPE HTML>
 <html lang="ru">
@@ -14,15 +16,16 @@ include_once "php/paggination.php";  ?>
   <link href="css/style.css" rel="stylesheet">
   <link href="css/fonts.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Source+Sans+Pro:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fira+Sans:500,600|Lobster|Pattaya|Press+Start+2P|Roboto+Condensed:700|Rubik+Mono+One|Russo+One|Stalinist+One" rel="stylesheet">
 
 </head>
-
+<!-- фывфывф -->
 <body>
 <header>
   <div class="navbar navbar-default navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
-            <a href="index.php" class="navbar-brand">ИСЗИ <span class="glyphicon glyphicon-lock" aria-hidden="true"></span></a>
+            <a href="index.php" class="navbar-brand"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span>ИСЗИ</a>
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#responsive-menu">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -39,49 +42,22 @@ include_once "php/paggination.php";  ?>
     </div>
   </header>
 
-<div class="container-fluid">
+<div class="container-fluid"> <!-- резиновый контейнер -->
   <div class="row">
-  <div class="col-lg-8 col-md-8 col-lg-offset-2 col-md-offset-2">
-
-<div class="row">
-    <div class="col-lg-9 col-md-8">
-
-
-    <?php echo $list; ?>
-
-      </div>
-
-<div class="row">
-<div class="col-lg-3 col-md-4">
-
-      <div class="panel panel-default">
-        <div class="panel-heading">Контактная информация</div>
-          <div class="panel-body">
-              <span class="glyphicon glyphicon-earphone" aria-hidden="true">
-              </span> Телефон: +793218312 <hr />
-              <span class="glyphicon glyphicon-envelope" aria-hidden="true">
-               </span> Email: isiz-sutd@gmail.com <hr />
-               <span class="glyphicon glyphicon-home" aria-hidden="true">
-              </span> Адресс: Вознессенский проспект,д20
-            </div>
+    <div class="col-lg-6 col-md-6 col-lg-offset-3 col-md-offset-3"> <!-- 6 столбцов с отступом в 3 столбца -->
+      <div class="row">
+        <div class="col-lg-12 col-md-12">
+          <?php echo $list; ?> <!-- весь контент, получаем из paggination.php -->
+          <div class="text-center"> <!-- универсальный div, выравнивает по центру, все, что входит в него -->
+            <ul class="pagination pagination-sm"> <!-- специальный класс для пагинации -->
+                <?php echo $paginationCtrls; ?> <!-- пагинация, полученная из paggination.php -->
+            </ul>
+          </div>
         </div>
+      </div>
     </div>
-</div>
-
-<div class="text-center">
-<ul class="pagination pagination-sm">
-  <?php echo $paginationCtrls; ?>
-</ul>
-</div>
   </div>
-
-
-
-
 </div>
-
-</div>
-  </div>
 
 
         <footer>
@@ -89,8 +65,8 @@ include_once "php/paggination.php";  ?>
             <div class="col-lg-12">
 <div class="text-center">
 
-              <ul class="list-unstyled">
-                <li class="pull-right"><a href="#top"><span class="glyphicon glyphicon-chevron-up"></span></a></li>
+
+
               <p>Made by <a href="http://thomaspark.co/" rel="nofollow">Thomas Park</a>. Contact him at <a href="mailto:thomas@bootswatch.com">smoer661@gmail.com</a>.</p>
               <p>Based on <a href="http://getbootstrap.com/" rel="nofollow">Bootstrap</a>. Icons from <a href="http://fortawesome.github.io/Font-Awesome/" rel="nofollow">Font Awesome</a>. Web fonts from <a href="http://www.google.com/webfonts" rel="nofollow">Google</a>.</p>
 
